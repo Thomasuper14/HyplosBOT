@@ -113,24 +113,6 @@ A17.ev.on('groups.update', async pea => {
         A17.sendMessage(pea[0].id, { image: wm_fatih, caption: A17textddfq})
       }
      })
-if (message.body.toLowerCase().includes('ciao')) {
-
-      message.reply('Ciao! Come posso aiutarti oggi?');
-
-    }
-
-    if (message.body.toLowerCase().includes('buongiorno')) {
-
-      message.reply('Buon Giorno! Come posso aiutarti??');
-
-    }
-
-    if (message.body.toLowerCase().includes('buonanotte')) {
-
-      message.reply('BuonaNotte!.');
-
-    }
-
 
 function pickRandom(list) {
 return list[Math.floor(list.length * Math.random())]
