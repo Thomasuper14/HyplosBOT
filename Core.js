@@ -57,37 +57,37 @@ const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
 
         if(time2 < "23:59:00"){
 
-        var ucapanWaktu = 'Good night 🌌'
+        var ucapanWaktu = 'Buona Notte 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🌆'
+        var ucapanWaktu = 'Buon Pomeriggio 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🌇'
+        var ucapanWaktu = 'Buon Pomeriggio 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🏞'
+        var ucapanWaktu = 'Buon Pomeriggio 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var ucapanWaktu = 'Good morning 🌅'
+        var ucapanWaktu = 'Buon Giorno 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var ucapanWaktu = 'Good night 🏙'
+        var ucapanWaktu = 'Buona Notte 🏙'
 
 }
 
@@ -1517,18 +1517,18 @@ for (let anju of kaiaudio){
 	
 	
 	let smallinput = budy.toLowerCase()
-    if (smallinput.includes('hello')) {
-      reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+    if (smallinput.includes('ciao')) {
+      reply (`ciao ${pushname}, Sono ${BotName}. Come posso aiutarti?`);
     } 
 	
-//if (smallinput.includes('hi')) {
+//if (smallinput.includes('helloi')) {
 
    //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
 
    // } 
 		
-	 if (smallinput=='kai') {
-        reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
+	 if (smallinput.includes('plo19')|| smallinput.includes('hypnos') || smallinput.includes('sviluppatori')) {
+        reply (`I miei sviluppatori si sono persi in un altro Multiverso, e non ho piu contatti con loro...`)
     }
 	
 	
@@ -1539,8 +1539,8 @@ for (let anju of kaiaudio){
     
 	
 	
-	 if (smallinput=='a17') {
-        reply ('Yes I am Alive 🫂')
+	 if (smallinput=='bot') {
+        reply ('Si Eccomi Presente! 🫂')
     }
 	
 	
@@ -1549,20 +1549,20 @@ if (smallinput=='ping') {
     }
 
 	
-    if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-      reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
+    if (smallinput.includes('buongiorno') || smallinput.includes('ohayo')) {
+      reply (`Buon Giorno anche a te ${pushname} ☺️. Abbi una buona giornata 😇.`);
     }
 	
-    if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
+    if (smallinput.includes('buon pomeriggio') || smallinput.includes('konnichiwa')) {
 
-      reply (`Good afthernoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
+      reply (`Buon Pomeriggio anche a te ${pushname} ✨. Spero che tu abbia un pomeriggio entusiasmante 😇🤞🏻.`);
 
     }
 
 
 
-    //if (smallinput.includes('good afthernoon')) {
-     // reply (`Huh ${pushname} 😇. Wishing you an enjoyable afternoon too.`);
+    //if (smallinput.includes('buon pomeriggio')) {
+     // reply (`Huh ${pushname} 😇. Spero tu abbia un pomeriggio entusiasmante.`);
  //   }
 	
 	
@@ -1573,7 +1573,7 @@ if (smallinput=='ping') {
     }
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
+      reply (`Non ringraziare ${pushname} 😇. Sono un bot dopo tutto.`);
     }
 	
 	
@@ -1589,7 +1589,7 @@ switch(command) {
     let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
     teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 SVILUPPATORI 🍁'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -5515,30 +5515,30 @@ A17.sendMessage(from, { react: { text: "📃" , key: m.key }})
 const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 
 │───────────────────────│
-┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Kai*.
+┠⬡│▸ ${pushname} Sono *HyPlosBOT*, Un bot sviluppato da *plo19* - *Hypnos*.
 │───────────────────────│
 │╭────────────────···▸
-┠─────═[ *TODAY* ]═────
+┠─────═[ *OGGI* ]═────
 │╰────────────────···▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Time* : ${kaitime}
-⬡│▸ *Date* : ${kaidate}
+⬡│▸ *Orario* : ${kaitime}
+⬡│▸ *Data* : ${kaidate}
 ┬│▸
 │╰────────────────···▸
 ┠───═[ *BOT INFO* ]═──▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Bot usr name :* ${pushname} 
-⬡│▸ *My prefix is :*  ${prefix}
-⬡│▸ *Owner name :* ${global.OwnerName} 
-⬡│▸ *Bot speed :* ${latensie.toFixed(4)} ms 
-⬡│▸ *Total Bot user :* ${Object.keys(global.db.users).length}
-⬡│▸ *Bot runtime :* ${runtime(process.uptime())} 
-⬡│▸ *Platform :* Linux 
+⬡│▸ *Nome del Bot :* ${pushname} 
+⬡│▸ *Prefisso :*  ${prefix}
+⬡│▸ *Nome degli Owner :* *plo19* - *Hypnos*
+⬡│▸ *Velocità Bot :* ${latensie.toFixed(4)} ms 
+⬡│▸ *Utilizzi Totali :* ${Object.keys(global.db.users).length}
+⬡│▸ *Bot RUNTIME :* ${runtime(process.uptime())} 
+⬡│▸ *Piattaforma :* Linux 
 ┬│▸
 │╰────────────────···▸
-┠⬡│▸ Here's the list of my Commands.
+┠⬡│▸ Questa è la lista dei miei comandi.
 │╭────────────────···▸
 │╰────────────────···▸
 ┠─━━〈 ⚙️ *Core* ⚙️ 〉━━
@@ -5551,7 +5551,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ repo, script, help
 ┬│▸
 ╰────────────────···▸
-┠━━〈 ❤️‍🔥 *Owner* ❤️‍🔥 〉━━
+┠━━〈 ❤️‍🔥 *ComandiOwner* ❤️‍🔥 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ self, public,
@@ -5564,7 +5564,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ ban add, ban del
 ┬│▸ 
 ╰────────────────···▸
-┠━━〈 ⭕ *Group* ⭕ 〉━━
+┠━━〈 ⭕ *Gruppi* ⭕ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ add, remove, tagall
@@ -5585,7 +5585,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ antilinkall, antiwame
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🔍 *Search* 🔎 〉━━
+┠━━〈 🔍 *Cerca* 🔎 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ play, ytmp3, ytmp4 
@@ -5598,7 +5598,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ manga, ringtone
 ┬│▸
 ╰────────────────···▸
-┠━━〈 📈 *Economy* 📈 〉━━
+┠━━〈 📈 *Economia* 📈 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ daily, wallet
@@ -5609,7 +5609,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ wealth / ritual
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎮 *Games* 🎮 〉━━
+┠━━〈 🎮 *Giochi* 🎮 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ ttt / tictactoe
@@ -5618,7 +5618,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ gamble / lottery
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🛠️ *Convert* 🛠️ 〉━━
+┠━━〈 🛠️ *Conversione* 🛠️ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ sticker, toimg, tovideo
@@ -5635,7 +5635,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ fat, nightcore, reverse,
 ┬│▸
 ╰────────────────···▸
-┠━━〈 📍 *Reactions* 📍 〉━━
+┠━━〈 📍 *Reazione* 📍 〉━━
 │╭───────────────···▸
 ┴│▸  
 ⬡│▸ cuddle, hug, kiss, 
@@ -5648,7 +5648,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ wink, poke, dance, cringe
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🌌 *Downloader* 🌌 〉━━
+┠━━〈 🌌 *Download* 🌌 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ ytvideo, mediafire, instagram,
@@ -5658,7 +5658,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ tiktoknowm, mediafire  
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎐 *Fun* 🎐 〉━━
+┠━━〈 🎐 *Divertimento* 🎐 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ reaction,  cutecheck
@@ -5683,7 +5683,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ anime, manga
 ┬│▸
 ╰────────────────···▸
-┠━━〈 ♨️ *Informative* ♨️ 〉━━
+┠━━〈 ♨️ *Informazioni* ♨️ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ animequote, quote, weather
@@ -5691,14 +5691,14 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ stalknumber / nowa
 ┬│▸
 ╰────────────────···▸
-━━〈 🪁 *Essentials* 🪁 〉━━
+━━〈 🪁 *Essenziali* 🪁 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ qr, say, translate, 
 ⬡│▸ fliptext, toletter
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎗 *Others* 🎗 〉━━
+┠━━〈 🎗 *Altro* 🎗 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ stickermeme, quotes,
@@ -5708,20 +5708,20 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ┠━━〈 ⚠️ *NSFW* ⚠️ 〉━━
 │╭───────────────···▸
 ┴│▸
-⬡│▸ 🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
+⬡│▸ 🍁 Scrivi " *${prefix}nsfw* " per abilitare NSFW (Admin only!) 
 ⬡│▸
-⬡│▸ 🍁 Then type " *${prefix}nsfwmenu* " for all NSFW commands.
+⬡│▸ 🍁 Poi scrivi " *${prefix}nsfwmenu* " per tutti i comandi NSFW.
 ⬡│▸
 ⬡│▸
 ⬡│▸ 『  *${global.BotName}*  』
-⬡│▸    Developed By: *Kai*
+⬡│▸    Sviluppato da:*plo19* - *Hypnos*
 ⬡│▸
-⬡│▸ 🌹 To use any of these commands type 
+⬡│▸ 🌹 Per usare uno di questi comandi digita: 
 ⬡│▸ " *${prefix}<Command name>* ".
 ⬡│▸
-⬡│▸ 🌹 To get Support Group link type " *${prefix}support* ".
+⬡│▸ 🌹 Per avere il Gruppo di Supporto digita " *${prefix}support* ".
 ⬡│▸
-⬡│▸ 🌹 Type " *${prefix}help* " to get full command list.`
+⬡│▸ 🌹 Scrivi " *${prefix}help* " Per avere la lista intera dei comandi.`
     
 
  let buttonshelpm = [
