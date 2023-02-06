@@ -786,15 +786,15 @@ sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'
 if (AntiLink) {
     linkgce = await A17.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
+    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNessun provvedimento preso! Link di questo Gruppo.`)
     } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
+    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nNessun provvedimento preso! AdminLink.`
     if (isAdmins) return reply(bvl)
     if (m.key.fromMe) return reply(bvl)
     if (isCreator) return reply(bvl)
     kice = m.sender
     await A17.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+    A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il baka è stato rimosso per aver mandato un'altro link nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
     } else {
     }
     }
@@ -5512,7 +5512,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 A17.sendMessage(from, { react: { text: "📃" , key: m.key }})      
-const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
+const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 
 │───────────────────────│
 ┠⬡│▸ ${pushname} Sono *HyPlosBOT*, Un bot sviluppato da *plo19* - *Hypnos*.
@@ -5544,9 +5544,9 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ┠─━━〈 ⚙️ *Core* ⚙️ 〉━━
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ speak, A17, stalk
-⬡│▸ profile, delete
-⬡│▸ deleteall, listgc, listpc
+⬡│▸ speak| -speak (Testo che vuoi che il bot dica) \nstalk| -stalk (numero di telefono)
+⬡│▸ \nprofile| profile (mostra il tuo profilo)
+⬡│▸ deleteall| (cancella il messaggio a cui stai rispondendo) listgc, listpc
 ⬡│▸ welcome, support
 ⬡│▸ repo, script, help
 ┬│▸
@@ -5827,7 +5827,7 @@ case 'weather':
         if (!args[0]) return reply("Enter your location to search weather.")
          myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
-        const weathertxt = `           🌤 Weather Report 🌤  \n\n🔎 Search Location: ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 Weather: ${myweather.data.weather[0].description}\n🌡️ Temperature: ${myweather.data.main.temp}°C\n❄️ Minimum Temperature: ${myweather.data.main.temp_min}°C\n📛 Maximum Temperature: ${myweather.data.main.temp_max}°C\n💦 Humidity: ${myweather.data.main.humidity}%\n🎐 Wind: ${myweather.data.wind.speed} km/h\n`
+        const weathertxt = `           🌤 Previsioni Meteorologiche 🌤  \n\n🔎 Search Location: ${myweather.data.name}\n*💮 Stato:* ${myweather.data.sys.country}\n🌈 Meteo: ${myweather.data.weather[0].description}\n🌡️ Temperatura: ${myweather.data.main.temp}°C\n❄️ Minima: ${myweather.data.main.temp_min}°C\n📛 Massima: ${myweather.data.main.temp_max}°C\n💦 Umidità: ${myweather.data.main.humidity}%\n🎐 Vento: ${myweather.data.wind.speed} km/h\n`
         A17.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertxt }, { quoted: m })
 
         break
@@ -5879,7 +5879,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+//         reply (`Il comando utilizzato non è registrato nel mio Database *${pushname}* sei proprio un senpai! Digita *${prefix}help* Per avere la mia lista di comandi!`)
 
     }	 			
 
