@@ -1568,8 +1568,8 @@ if (smallinput=='ping') {
 	
 	
 	
-    if (smallinput.includes('good night')) {
-      reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
+    if (smallinput.includes('buonanotte')) {
+      reply (`Buonanotte anche a te ${pushname} 😇. Dormi bene e Songi D'Orzo.`);
     }
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
