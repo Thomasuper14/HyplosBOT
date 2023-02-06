@@ -37,7 +37,7 @@ const { smsg, formatp, tanggal, GIFBufferToVideoBuffer, formatDate, getTime, isU
 const { aiovideodl } = require('./lib/scraper.js')
 const cheerio = require ("cheerio");
 const eco = require('discord-mongoose-economy')
-const ty = eco.connect('mongodb+srv://Arch:1t6l2G0r6nagLlOb@cluster0.gedh4.mongodb.net/?retryWrites=true&w=majority');
+const ty = eco.connect('mongodb+srv://HYPNOSSS:Am3.spillo@cluster0.klzumvh.mongodb.net/?retryWrites=true&w=majority');
 const textpro = require('./lib/textpro')
 const { detikNews } = require('./lib/detik')
 const { wikiSearch } = require('./lib/wiki.js');
