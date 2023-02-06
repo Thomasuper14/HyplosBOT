@@ -10,14 +10,14 @@ global.antitags = true
 //global.autoTyping = false //auto tying in gc (true to on, false to off)
 //global.autoRecord = true //auto recording (true to on, false to off)
 
-global.Owner = ['916297175943','919362639362']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ['916297175943','919362639362']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ['916297175943']
-global.BotName = "A17"
-global.packname = "A17 bot"
-global.author = "By: Kai"
-global.OwnerName = "Kai"
-global.BotSourceCode = "https://github.com/Kai0071/A17"
+global.Owner = ['393477037227','393662531766']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber = ['393477037227','393662531766']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ['393477037227','393662531766']
+global.BotName = "Hyplos"
+global.packname = "Hyplos BOT"
+global.author = "By: Hypnos & H2Plo"
+global.OwnerName = "Hypnos & H2Plo"
+global.BotSourceCode = "https://youtu.be/dQw4w9WgXcQ"
 global.SupportGroupLink = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
 global.sessionName = "session"
 
@@ -30,7 +30,7 @@ global.location = "West Bengal, India"
 global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' }
-global.websitex = "https://github.com/Kai0071"
+global.websitex = "https://chat.whatsapp.com/KsZtRqWrQgSEEhkPGNWIyX"
 global.lolhuman = "KaysaS"
 
 
@@ -61,12 +61,12 @@ global.ntilink = []
 
 
 global.mess = {
-    jobdone: 'Job done...',
-    useradmin: 'Sorry, only *Group Admins* can use this command *Dear*!',
-    botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-    botowner: 'Only my *Owner* can use this command, Yeah!',
-    grouponly: 'This command is only made for *Groups*, Baka!',
-    privateonly: 'This command is only made for *Private Chat*, Okey ?!',
+    jobdone: 'Lavoro completato...',
+    useradmin: 'Mi dispiace, solo gli *Amministratori* possono usare questo *Comando*!',
+    botadmin: 'Mi dispiace, non posso eseguire questo comando siccome non sono un *Amministratore* di questo gruppo.',
+    botowner: 'Solo i miei *Proprietari* possono usare questo *Comando*!',
+    grouponly: 'Questo comando è utilizzabile sono nei *Gruppi*!',
+    privateonly: 'Questo comando è utilizzabile solo in *Chat Privata*!',
     botonly: 'Only the *Bot itself* can use this command!',
     waiting: ' Ruko Zara...',
     nolink: 'Please provide me *link*, Uff!',
