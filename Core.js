@@ -5529,7 +5529,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ┠───═[ *BOT INFO* ]═──▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Nome del Bot :* ${pushname} 
+⬡│▸ *Nome:* ${pushname} 
 ⬡│▸ *Prefisso :*  ${prefix}
 ⬡│▸ *Nome degli Owner :* *plo19* - *Hypnos*
 ⬡│▸ *Velocità Bot :* ${latensie.toFixed(4)} ms 
