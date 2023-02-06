@@ -23,7 +23,7 @@ global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['/'] 
+global.prefa = ['-'] 
 
 
 global.location = "Italia"
