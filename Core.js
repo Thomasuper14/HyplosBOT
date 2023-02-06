@@ -1406,7 +1406,7 @@ const ftroli = {
     Up Time : ${runtime(process.uptime())}
     Bot Name : ${global.BotName}
     Owner Name : ${global.OwnerName}
-    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS
+    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS VPS
     𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
     
     
