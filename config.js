@@ -15,15 +15,15 @@ global.OwnerNumber = ['393477037227','393662531766']  //If you want singal numbe
 global.ownertag = ['393477037227','393662531766']
 global.BotName = "Hyplos"
 global.packname = "Hyplos BOT"
-global.author = "By: Hypnos & H2Plo"
-global.OwnerName = "Hypnos & H2Plo"
+global.author = "By: Hypnos & plo19"
+global.OwnerName = "Hypnos & plo19"
 global.BotSourceCode = "https://youtu.be/dQw4w9WgXcQ"
 global.SupportGroupLink = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
 global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['-'] 
+global.prefa = ['/'] 
 
 
 global.location = "Italia"
