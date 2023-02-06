@@ -57,37 +57,37 @@ const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
 
         if(time2 < "23:59:00"){
 
-        var ucapanWaktu = 'Good night 🌌'
+        var ucapanWaktu = 'Buona Notte 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🌆'
+        var ucapanWaktu = 'Buon Pomeriggio 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🌇'
+        var ucapanWaktu = 'Buon Pomeriggio 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🏞'
+        var ucapanWaktu = 'Buon Pomeriggio 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var ucapanWaktu = 'Good morning 🌅'
+        var ucapanWaktu = 'Buona Sera 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var ucapanWaktu = 'Good night 🏙'
+        var ucapanWaktu = 'Buona Notte 🏙'
 
 }
 
@@ -519,7 +519,7 @@ var levelRole = getLevelingLevel(m.sender)
                                         addLevelingXp(m.sender, amountXp)
                                         if (requiredXp <= getLevelingXp(m.sender)) {
                                         addLevelingLevel(m.sender, 1)
-teks = `「 *User Level UP* 」\n\n@${m.sender.split("@")[0]} got leveled up!!\n\n*User XP*: ${getLevelingXp(m.sender)}\n*Level*: ${getLevel} -> ${getLevelingLevel(m.sender)}\n*Role*: ${role} \n\n`
+teks = `「 *Level UP* 」\n\n@${m.sender.split("@")[0]}salito di livello!!\n\n*User XP*: ${getLevelingXp(m.sender)}\n*Level*: ${getLevel} -> ${getLevelingLevel(m.sender)}\n*Role*: ${role} \n\n`
 A17.sendMessage(m.chat, {text: teks, mentions:[m.sender]}, {quoted:m})
 }
 
@@ -759,18 +759,18 @@ let afkTime = user.afkTime
 if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
 reply(`
-Pls try not to tag him!
-He's in away from keyboard ${reason ? 'with reason ' + reason : 'no reason'}
-During ${clockString(new Date - afkTime)}
+Perfavore non taggatelo!
+Lui è afk ${reason ? 'with reason ' + reason : 'no reason'}
+Durata ${clockString(new Date - afkTime)}
 `.trim())
 }
 
 if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
-Pls try not to tag him!
-He's Offline ${user.afkReason ? ' after ' + user.afkReason : ''}
-During ${clockString(new Date - user.afkTime)}
+Perfavore non taggatelo!
+Lui è offline ${user.afkReason ? ' after ' + user.afkReason : ''}
+Durata ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
 user.afkReason = ''
@@ -778,7 +778,7 @@ user.afkReason = ''
 
 
 if (m.mtype === 'groupInviteMessage') {
-teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
+teks = `Io non posso entrare nei gruppi, il mio *Owner* mi farà entrare. Scrivi *-owner* per avere il suo numero.`
 sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
 
@@ -786,15 +786,15 @@ sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'
 if (AntiLink) {
     linkgce = await A17.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
+    reply(`\`\`\`「  Sistema Antilink  」\`\`\`\n\nNessun provvedimento preso dato che il link è di questo gruppo!`)
     } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
+    bvl = `\`\`\`「  *Sistema Antilink*  」\`\`\`\n\nIl link è stato inviato dall'admin. Nessun problema!`
     if (isAdmins) return reply(bvl)
     if (m.key.fromMe) return reply(bvl)
     if (isCreator) return reply(bvl)
     kice = m.sender
     await A17.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+    A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato link incoerenti nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
     } else {
     }
     }
@@ -802,25 +802,25 @@ if (AntiLink) {
     if (antiWame)
     if (budy.includes(`wa.me`)) {
   if (!isBotAdmins) return
-  bvl = `\`\`\`「 _'wa.me' PM link Detected!_  」\`\`\`\n\nLink sent by Admin so no action is taken!`
+  bvl = `\`\`\`「 _'wa.me' PM Link Trovato!_  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
   if (isAdmins) return reply(bvl)
   if (m.key.fromMe) return reply(bvl)
   if (isCreator) return reply(bvl)
   kice = m.sender
   await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-  A17.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+  A17.sendMessage(from, {text:`\`\`\`「 'wa.me' PM Link Trovato! 」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
   } else {
   }
   if (antiWame)
   if (budy.includes(`http://wa.me`)) {
 if (!isBotAdmins) return
-bvl = `\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\nLink sent by Admin so no action is taken!`
+bvl = `\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-A17.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]}  Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+A17.sendMessage(from, {text:`\`\`\`「 'wa.me' PM link Detected! 」\`\`\`\n\n@${kice.split("@")[0]}  Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 
@@ -838,15 +838,15 @@ if (antiVirtex) {
         if (!isBotAdmins) return
         linkgce = await A17.groupInviteCode(from)
         if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-        reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be taken because you sent this group's link!`)
+        reply(`\`\`\`「  Sistema Antilink  」\`\`\`\n\nNessun provvedimento dato che il link mandato appartiene a questo gruppo!`)
         } else if (isUrl(m.text)) {
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nAdmin has sent a group link so no action will be taken!`
+        bvl = `\`\`\`「  Sistema Antilink  」\`\`\`\n\nIl link è stato inviato dall'admin nessun problema`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Sistema Antilink  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         }
@@ -855,52 +855,52 @@ if (antiVirtex) {
         if (AntiLinkYoutubeVid)
         if (budy.includes("https://youtu.be/")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Yt video link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
         if (AntiLinkYoutubeChannel)
            if (budy.includes("https://youtube.com/")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Yt channel link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
         if (AntiLinkInstagram)
            if (budy.includes("https://www.instagram.com/")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Instagram link in this group! No promotion is allowed!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo! Promozioni non consentite!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
         if (AntiLinkFacebook)
            if (budy.includes("https://facebook.com/")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Facebook link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
@@ -908,52 +908,51 @@ if (antiVirtex) {
            if (budy.includes("https://t.me/")){
         if (AntiLinkTelegram)
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Telegram link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
         if (AntiLinkTiktok)
            if (budy.includes("https://www.tiktok.com/")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Tiktok link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
         if (AntiLinkTwitter)
            if (budy.includes("https://twitter.com/")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Twitter link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
         if (AntiLinkAll)
            if (budy.includes("https://")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink inviato dall'admin. Nessun provvedimento!`
         if (isAdmins) return reply(bvl)
-        if (m.key.fromMe) return reply(bvl)
-        if (isCreator) return reply(bvl)
+        if (m.key.fromMe) return reply(bvl)Link inviato dall'admin. Nessun provvedimento
         kice = m.sender
         await A17.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending links in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il Baka è stato rimosso per aver mandato un link incoerente nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
@@ -968,7 +967,7 @@ ${themeemoji} Date : ${moment.tz('Asia/Kolkata').format('DD/MM/YYYY')}
 ${themeemoji} MessageType : ${m.mtype}`
 A17.sendTextWithMentions(m.chat, teks, m)
 await sleep(500)
-m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Maybe it's been opened by a bot`))
+m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Forse è stato aperto dal bot`))
 }
 
 
@@ -997,7 +996,7 @@ let cron = require('node-cron')
       kuis = true
       jawaban = tebaklagu[m.sender.split('@')[0]]
       if (budy.toLowerCase() == jawaban) {
-      await A17.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Song 🎮\n\nCorrect answer 🎉\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+      await A17.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Indovina La Canzone' }, type: 1 }], `🎮 Indovina La Canzone 🎮\n\nRisposta Corretta 🎉\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
       delete tebaklagu[m.sender.split('@')[0]]
       } else reply('*Wrong answer!*')
       }
@@ -1006,7 +1005,7 @@ let cron = require('node-cron')
         kuis = true
         jawaban = tebakgambar[m.sender.split('@')[0]]
         if (budy.toLowerCase() == jawaban) {
-        await A17.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+        await A17.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Indovina La Foto' }, type: 1 }], `🎮 Indovina La Foto 🎮\n\nRisposta Corretta 🎉\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
         delete tebakgambar[m.sender.split('@')[0]]
         } else reply('*Wrong answer!*')
         }
@@ -1015,7 +1014,7 @@ let cron = require('node-cron')
           kuis = true
           jawaban = tebakkata[m.sender.split('@')[0]]
           if (budy.toLowerCase() == jawaban) {
-          await A17.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+          await A17.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Indovina La Parola 🎮\n\nRisposta Corretta 🎉\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
           delete tebakkata[m.sender.split('@')[0]]
           } else reply('*Wrong answer!*')
           }
@@ -1025,7 +1024,7 @@ let cron = require('node-cron')
           jawaban = caklontong[m.sender.split('@')[0]]
           deskripsi = caklontong_desk[m.sender.split('@')[0]]
           if (budy.toLowerCase() == jawaban) {
-          await A17.sendButtonText(m.chat, [{ buttonId: 'guess saying', buttonText: { displayText: 'Guess The Saying' }, type: 1 }], `🎮 Guess The Saying 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+          await A17.sendButtonText(m.chat, [{ buttonId: 'guess saying', buttonText: { displayText: 'Guess The Saying' }, type: 1 }], `🎮 Indovina Cosa Dice 🎮\n\nRisposta Corretta 🎉\n*${deskripsi}*\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
           delete caklontong[m.sender.split('@')[0]]
           delete caklontong_desk[m.sender.split('@')[0]]
           } else reply('*Wrong answer!*')
@@ -1035,7 +1034,7 @@ let cron = require('node-cron')
           kuis = true
           jawaban = tebakkalimat[m.sender.split('@')[0]]
           if (budy.toLowerCase() == jawaban) {
-          await A17.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+          await A17.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Indovina La Scena 🎮\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
           delete tebakkalimat[m.sender.split('@')[0]]
           } else reply('*Wrong answer!*')
           }
@@ -1044,7 +1043,7 @@ let cron = require('node-cron')
           kuis = true
           jawaban = tebaklirik[m.sender.split('@')[0]]
           if (budy.toLowerCase() == jawaban) {
-          await A17.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+          await A17.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Indovina La Lyrics 🎮\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
           delete tebaklirik[m.sender.split('@')[0]]
           } else reply('*Wrong answer!*')
           }
@@ -1053,7 +1052,7 @@ let cron = require('node-cron')
           kuis = true
           jawaban = tebaktebakan[m.sender.split('@')[0]]
           if (budy.toLowerCase() == jawaban) {
-          await A17.sendButtonText(m.chat, [{ buttonId: 'riddles', buttonText: { displayText: 'Riddles' }, type: 1 }], `🎮 Riddles 🎮\n\nCorrect Answer 🎉\n\nWant to play again? press the button below`, `${global.BotName}`, m)
+          await A17.sendButtonText(m.chat, [{ buttonId: 'riddles', buttonText: { displayText: 'Riddles' }, type: 1 }], `🎮 Riddles 🎮\n\nGiochiamo di nuovo? Premi il bottone qua sotto!`, `${global.BotName}`, m)
           delete tebaktebakan[m.sender.split('@')[0]]
           } else reply('*Wrong answer!*')
           }
@@ -1088,7 +1087,7 @@ let cron = require('node-cron')
           let tie = false
           if (m.sender == roof.p2 && /^(acc(ept)?|accept|yes|oke?|reject|dont want|later|no(pe)?can|y)/i.test(m.text) && m.isGroup && roof.status == 'wait') {
           if (/^(reject|dont want|later|n|no(pe)?can)/i.test(m.text)) {
-          A17.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} rejected the suit, the suit is canceled`, m)
+          A17.sendTextWithMentions(m.chat, `@${roof.p2.split`@`[0]} Rifuitato! E stato cancellato`, m)
           delete this.suit[roof.id]
           return !0
           }
@@ -1096,7 +1095,7 @@ let cron = require('node-cron')
           roof.asal = m.chat
           clearTimeout(roof.waktu)
           
-          A17.sendText(m.chat, `Suit has been sent to chat
+          A17.sendText(m.chat, `Suit mandata in chat
           @${roof.p.split`@`[0]} dan 
           @${roof.p2.split`@`[0]}
 
@@ -1105,10 +1104,10 @@ let cron = require('node-cron')
           if (!roof.pilih) A17.sendText(roof.p, `Please select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
           if (!roof.pilih2) A17.sendText(roof.p2, `Please select \n\nRock🗿\nPaper📄\nScissors✂️`, m)
           roof.waktu_milih = setTimeout(() => {
-          if (!roof.pilih && !roof.pilih2) A17.sendText(m.chat, `Both players don't want to play,\nSuit canceled`)
+          if (!roof.pilih && !roof.pilih2) A17.sendText(m.chat, `Entrambi i player non vogliono giocare,\nSuit cancellata`)
           else if (!roof.pilih || !roof.pilih2) {
           win = !roof.pilih ? roof.p2 : roof.p
-          A17.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} don't choose suit, game over`, m)
+          A17.sendTextWithMentions(m.chat, `@${(roof.pilih ? roof.p2 : roof.p).split`@`[0]} Non scegliere suit, fine gioco!`, m)
           }
           delete this.suit[roof.id]
           return !0
@@ -1123,13 +1122,13 @@ let cron = require('node-cron')
           if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
           roof.pilih = reg.exec(m.text.toLowerCase())[0]
           roof.text = m.text
-          reply(`You have chosen ${m.text} ${!roof.pilih2 ? `\n\nWaiting for the opponent to choose` : ''}`)
+          reply(`You have chosen ${m.text} ${!roof.pilih2 ? `\n\nAttesa della scelta dell'avversario` : ''}`)
           if (!roof.pilih2) A17.sendText(roof.p2, '_The opponent has chosen_\nNow it is your turn', 0)
           }
           if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
           roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
           roof.text2 = m.text
-          reply(`You have chosen ${m.text} ${!roof.pilih ? `\n\nWaiting for the opponent to choose` : ''}`)
+          reply(`You have chosen ${m.text} ${!roof.pilih ? `\n\nAttesa della scelta dell'avversario` : ''}`)
           if (!roof.pilih) A17.sendText(roof.p, '_The opponent has chosen_\nNow it is your turn', 0)
           }
           let stage = roof.pilih
@@ -1185,7 +1184,7 @@ let cron = require('node-cron')
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-            await reply(`「 *Math Quiz* 」\n\n 🎉 Correct Answer 🎉\n\nWant to play again? send ${prefix}math mode`)
+            await reply(`「 *Math Quiz* 」\n\n 🎉 Risposta Corretta 🎉\n\nVuoi giocare ancora? Invia ${prefix}math mode`)
             delete kuismath[m.sender.split('@')[0]]
             } else reply('*Wrong answer!*')
             }
@@ -1398,7 +1397,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Kai to take your WhatsApp usage into next level.
+    Hey ${pushname} 👋. Sono HyPlosBOT, i miei sviluppatori sono *plo19* e *Hypnos* da qui nasce il mio nome! Aggiungimi ai gruppi o scrivimi in privato per portare il tuo WhatsApp al un livello più alto!.
         
        「 System Info 」
     
@@ -1426,9 +1425,9 @@ const ftroli = {
     Potion : ${getPotion(m.sender)}
     
     
-    Type *-menu* or press any button below to start using *${global.BotName}*
+    Scrivi *-menu* o premi qualsiasi bottone qui sotto per iniziare ad usare *HyPlosBOT*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *Kai*
+    ©️ *HyPlosBOT}*Meriti Riservati: *plo19* - *Hypnos*
     `
         const qtod = m.quoted? "true":"false"
         
@@ -1518,29 +1517,29 @@ for (let anju of kaiaudio){
 	
 	let smallinput = budy.toLowerCase()
     if (smallinput.includes('hello')) {
-      reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+      reply (`Hello ${pushname}, Sono HyPlosBOT come posso aiutarti?`);
     } 
 	
 //if (smallinput.includes('hi')) {
 
-   //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+   //   reply (`Hello ${pushname}, Sono HyPlosBOT come posso aiutarti?`);
 
    // } 
 		
 	 if (smallinput=='kai') {
-        reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
+        reply (`I miei capi si sono persi in un altro Multiverso ed ho perso il contatto con loro...`)
     }
 	
 	
 
     if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-      reply (`Konichiwa ${pushname}, I am ${BotName}. How can i help you?`);
+      reply (`Hey ${pushname}, Sono HyPlosBOT come posso aiutarti?`);
     }
     
 	
 	
-	 if (smallinput=='a17') {
-        reply ('Yes I am Alive 🫂')
+	 if (smallinput=='HyPlosBOT') {
+        reply ('Si, Sono vivo! 🫂')
     }
 	
 	
@@ -1549,31 +1548,31 @@ if (smallinput=='ping') {
     }
 
 	
-    if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-      reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
+    if (smallinput.includes('buongiorno') || smallinput.includes('ohayo')) {
+      reply (`Buon Giorno anche a te ${pushname} ☺️. Spero tu abbia una Buona Giornata 😇.`);
     }
 	
-    if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
+    if (smallinput.includes('buon pomeriggio') || smallinput.includes('konnichiwa')) {
 
-      reply (`Good afthernoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
+      reply (`Buon Pomeriggio anche a te ${pushname} ✨. Spero abbia anche tu un Buon Pomeriggio 😇🤞🏻.`);
 
     }
 
 
 
-    //if (smallinput.includes('good afthernoon')) {
-     // reply (`Huh ${pushname} 😇. Wishing you an enjoyable afternoon too.`);
+    //if (smallinput.includes('buon pomeriggio')) {
+     // reply (`Huh ${pushname} 😇. Spero tu abbia un entusiasmante pomeriggio.`);
  //   }
 	
 	
 	
 	
-    if (smallinput.includes('good night')) {
-      reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
+    if (smallinput.includes('buonanotte')) {
+      reply (`Buona Notte anche a te ${pushname} 😇. Dormi bene e Sogni D'oro.`);
     }
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
+      reply (`Non Menzionare ${pushname} 😇. Sono un BOT dopo tutto.`);
     }
 	
 	
@@ -1587,19 +1586,19 @@ switch(command) {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
-    teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*A17 Script*\n\n* Stelle Totali *: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 SVILUPPATORI 🍁'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
     jpegThumbnail: BotLogo ,
     caption: teks,
-    footer: `${BotName }`,
+    footer: `HyPlosBOT`,
     buttons: buttons,
     headerType: 4,
     /*contextInfo:{externalAdReply:{
-    title:"Powered by Kai",
+    title:"Powered by *plo19* - *Hypnos*",
     body: " ", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
@@ -1660,13 +1659,13 @@ let buttonspro = [
 		case 'report': case 'suggest ': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-    if (!text) return reply(`please provide a report message you want to deliver`)
+    if (!text) return reply(`perfavore reporta il messaggio che vuoi`)
     if (text.length > 300) return reply(`Are you trying to send virus!`)
     const txtmsg = `*📮 Report Message*\n\n*Sender ➛* wa.me/${m.sender.split("@")[0]}\n\n*Group Name ➛* ${groupName}\n\n*Message ➛*  ${text}`
 	for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
 	await A17.sendMessage(`${mod}`, {text: `${txtmsg}`},  { quoted: m })
 	await A17.sendMessage(`120363026915700516@g.us`, {text: `${txtmsg}`, mentions: groupAdmins}, { quoted: m })
-    replay(`*✅ Your Report has been submitted Successfully to Support group & Owner*\n\n*You will get response shortly ♥️*`); 
+    replay(`*✅ La tua segnalazione è stata inviata al team del gruppo & Owner*\n\n*Ti risponderemo a breve ♥️*`); 
  }
  break   
 		
@@ -1682,9 +1681,9 @@ let buttonspro = [
 	const cara = "cara"
 	const daily  = await eco.daily(user, cara, 9999); //give 999 for daily, can be changed
 	
-	        if (daily.cd) return replay(`You already claimed daily for today, come back in ${daily.cdL}`); //cdL is already formatted cooldown Left
+	        if (daily.cd) return replay(`Hai già riscattato tutto per oggi, ctorna in ${daily.cdL}`); //cdL è pronto per il cooldown Left
 	
-            replay(`You claimed 💎${daily.amount} for daily`);        
+            replay(`Hai riscattato 💎${daily.amount} per oggi`);        
 }
 break
 		
@@ -1735,22 +1734,22 @@ break
   switch (value) {
           case '1000':
           case '1':
-          if (k > balance.wallet ) return replay(`You need to pay 💎100 to increase bank capacity ~ 1000 sp`);
+          if (k > balance.wallet ) return replay(`Bisogna pagare 💎100 per aumentare la capacità della banca ~ 1000 sp`);
             const deduct1 = await eco.deduct(user, cara, 100);
             const add1 = eco.giveCapacity(user, cara, 1000); 
-                await replay(`1000 💎diamond storage has been added in ${pushname} bank`)
+                await replay(`1000 💎lo spazio per i diamanti è stato incrementato per la banca di ${pushname}`)
          case '10000':
           case '2':
-          if (k > balance.wallet ) return replay(`You need to pay 💎1000 to increase bank capacity ~ 10000 sp`);
+          if (k > balance.wallet ) return replay(`Bisogna pagare 💎1000 per aumentare la capacità della banca ~ 10000 sp`);
             const deduct2 = await eco.deduct(user, cara, 1000);
             const add2 = eco.giveCapacity(user, cara, 10000); 
-                await replay(`10000 💎diamond storage has been added in ${pushname} bank`)
+                await replay(`10000 💎lo spazio per i diamanti è stato incrementato per la banca di ${pushname} bank`)
          case '100000':
           case '3':
-          if (k > balance.wallet ) return replay(`You need to pay 💎10000 to increase bank capacity ~ 100000 sp`);
+          if (k > balance.wallet ) return replay(`Bisogna pagare 💎10000 per aumentare la capacità della banca ~ 100000 sp`);
             const deduct3 = await eco.deduct(user, cara, 10000);
             const add3 = eco.giveCapacity(user, cara, 100000); 
-                await replay(`100000 💎diamond storage has been added in ${pushname} bank`)
+                await replay(`100000 💎lo spazio per i diamanti è stato incrementato per la banca di ${pushname} bank`)
           }
             }
                 break
@@ -1761,13 +1760,13 @@ break
 	case'deposit':  case 'pay-in': {
         if (isBan) return reply(mess.banned)	 			
         if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-		if (!text) return replay("Provide the amount you want to deposit!");
+		if (!text) return replay("Scrivi anche quanto depositare!");
 		const texts = text.trim();
 		const user = m.sender;
 		const cara = 'cara'
         const deposit = await eco.deposit(user, cara, texts);
-            if(deposit.noten) return replay('You can\'t deposit what you don\'t have.'); //if user states more than whats in his wallet
-             replay(`Successfully Deposited 💎${deposit.amount} to your bank.`)
+            if(deposit.noten) return replay('Non puoi depositare quanto non hai.'); //if user states more than whats in his wallet
+             replay(`Depositati con successo 💎${deposit.amount} nella tua banca.`)
 		
 }
 break	
@@ -1780,13 +1779,13 @@ break
       if (isBanChat) return reply(mess.bangc)
       if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
         const user = m.sender
-		if (!text) return replay("Provide the amount you want to withdraw!");
+		if (!text) return replay("Scrivi anche quanto vuoi prelevare!");
 		const query = text.trim();
         const cara = 'cara'
         const withdraw = await eco.withdraw(user, cara, query);
-        if(withdraw.noten) return replay('🏧 Insufficient fund in bank'); //if user states more than whats in his wallet
+        if(withdraw.noten) return replay('🏧 Fondi insufficenti'); //if user states more than whats in his wallet
         const add = eco.give(user, cara, query);
-          replay(`🏧 ALERT  💎${withdraw.amount} has been added in your wallet.`)
+          replay(`🏧 ALLERTA  💎${withdraw.amount} sono aggiunti al tuo portafoglio.`)
         
 }
 break  
@@ -1800,7 +1799,7 @@ break
 			             m.quoted && m.mentionedJid.length === 0
 			             ? m.quoted.sender
 			             : m.mentionedJid[0] || null;    
-           if (!target || target === m.sender) return replay("what are you trying to do!")
+           if (!target || target === m.sender) return replay("cosa stai facendo!")
            if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
         while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
         const cara = "cara"
@@ -1811,12 +1810,12 @@ break
 	const balance2  = await eco.balance(user2, cara)
 	const typ = ['ran','rob','caught'];
     const random = typ[Math.floor(Math.random() * typ.length)];
-    if (k > balance1.wallet) return replay(`☹️ You don't have enough money to pay incase you get caught`);
-    if (k > balance2.wallet) return replay(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
+    if (k > balance1.wallet) return replay(`☹️ Non hai abbastanza soldi per pagare`);
+    if (k > balance2.wallet) return replay(`Scusa la tua vittima è povera 🤷🏽‍♂️ lasciala andare.`);
     let tpy = random
   switch (random) {
           case 'ran':
-                await replay(`Your victim escaped, be more scaryðŸ˜¤ next time.`)
+                await replay(`La tua vittima è scappata per la troppa paura ðŸ˜¤ Sarà la prossima volta.`)
   }
 	}
                 break  
@@ -1841,7 +1840,7 @@ break
 		           const word = value[0];
 		           const code = value[1];
 		let d = parseInt(word)
-		if (!d) return replay("check your text plz u r using the command in a wrong way")
+		if (!d) return replay("controlla e correggi i comandi")
 		
 		const balance = await eco.balance(user1, cara); 
         let a = (balance.wallet) < parseInt(word)
@@ -1850,7 +1849,7 @@ break
         
         const deduct = await eco.deduct(user1, cara, value[0]);
         const give = await eco.give(user2, cara, value[0]);
-        replay(`📠 Transaction successful`)
+        replay(`📠 Transazione eseguita con successo!`)
 
 }
 break  	  
@@ -1893,23 +1892,23 @@ break
            return replay(
                `Example:  ${prefix}gamble 100 direction(left,right,up,down)`
            );
-       if (!value) return replay("*Please, specify the amount you are gambling with!");
-       if (!opp) return replay("Specify the direction you are betting on!");
-       if (!gg) return replay("Check your text please, You are using the command in a wrong way")
+       if (!value) return replay("*Per favore, specifica l'importo con cui stai giocando!");
+       if (!opp) return replay("Specifica la direzione su cui stai scommettendo!");
+       if (!gg) return replay("Controlla il tuo testo per favore, stai usando il comando in modo sbagliato")
        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
-       if (g == false) return replay(`You don't have sufficient 💎 Diamond to gamble with`);
-       if (a == true) return replay(`Sorry ${pushname}, you can only gamble with more than 💎50.`);
+       if (g == false) return replay(`Non hai abbastanza 💎 Diamante con cui scommettere`);
+       if (a == true) return replay(`Spiacente ${pushname}, puoi giocare solo con più di 💎50.`);
        if ( r == opp){
           let give = await eco.give(user , cara, twice);
-          replay(`*📉 You won 💎${twice}*`)
+          replay(`*📉 Hai vinto 💎${twice}*`)
        }
        else{
           let deduct = await eco.deduct(user, cara, texts[0]);
-          replay(`*📈 You lost 💎${texts[0]}*`)
+          replay(`*📈 Hai perso 💎${texts[0]}*`)
         }
     //}
     //else{
-        //replay(`Gambling is allowed only in Casino/Gamble Group,\n\ntype ${prefix}casino to get the group link`)
+        //replay(`Il gioco d'azzardo è consentito solo in Casino/Gamble Group,\n\ndigita ${prefix}casino per ottenere il link del gruppo`)
     //}
 }
 break
@@ -1922,23 +1921,28 @@ case'slot': case 'spin': {
        if (!m.isGroup) return replay(mess.grouponly)
        var today = new Date();
    if (today.getDay() == 6 || today.getDay() == 5 || today.getDay() == 0){
-       if (text == 'help') return replay(`*1:* Use ${prefix}slot to play\n\n*2:* You must have 💎100 in your wallet\n\n*3:* If you don't have money in wallet then withdraw from your bank\n\n*4:* If you don't have money in your bank too then use economy features to gain money`)
-       if (text == 'money') return replay(`*1:* Small Win --> +💎20\n\n*2:* Small Lose --> -💎20\n\n*3:* Big Win --> +💎100\n\n*4:* Big Lose --> -💎50\n\n*5:* 🎉 JackPot --> +💎1000`)
+       if (text == 'help') return replay(`*1:*
+Usa ${prefix}slot per giocare\n\n*2:* Devi avere 💎100 nel tuo portafoglio\n\n*3:* Se non hai soldi nel portafoglio, preleva dalla tua banca\n\n *4:* Se anche tu non hai denaro in banca, usa le funzionalità economiche per guadagnare denaro`)
+       if (text == 'money') return replay(`*1:*
+Piccola vittoria --> +💎20\n\n*2:* Piccola perdita --> -💎20\n\n*3:* Grande vittoria --> +💎100\n\n*4:* Grande perdita --> -💎50\n\n*5:* 🎉 JackPot --> +💎1000`)
        const fruit1= ["🥥", "🍎", "🍇"]
        const fruit2 = ["🍎", "🍇", "🥥"]  
        const fruit3 = ["🍇", "🥥", "🍎"]         
        const fruit4 = ["🍇", "🍎", "🥥"]
-       const lose = ['*You suck at playing this game*\n\n_--> 🍍-🥥-🍎_', '*Totally out of line*\n\n_--> 🥥-🍎-🍍_', '*Are you a newbie?*\n\n_--> 🍎-🍍-🥥_']
-       const smallLose = ['*You cannot harvest coconut 🥥 in a pineapple 🍍 farm*\n\n_--> 🍍>🥥<🍍_', '*Apples and Coconut are not best Combo*\n\n_--> 🍎>🥥<🍎_', '*Coconuts and Apple are not great deal*\n\n_--> 🥥>🍎<🥥_']
-       const won = ['*You harvested a basket of*\n\n_--> 🍎+🍎+🍎_', '*Impressive, You must be a specialist in plucking coconuts*\n\n_--> 🥥+🥥+🥥_', '*Amazing, you are going to be making pineapple juice for the family*\n\n_--> 🍍+🍍+🍍_']             
-       const near = ['*Wow, you were so close to winning pineapples*\n\n_--> 🍎-🍍+🍍_', '*Hmmm, you were so close to winning Apples*\n\n_--> 🍎+🍎-🍍_']          
-       const jack = ['*🥳 JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 You Just hit a jackpot worth 💎1000*']
+       const lose = ['*
+Fai schifo a giocare a questo gioco*\n\n_--> 🍍-🥥-🍎_', '*Totalmente fuori luogo*\n\n_--> 🥥-🍎-🍍_', '*Sei un principiante ?*\n\n_--> 🍎-🍍-🥥_']
+       const smallLose = ['*
+Non puoi raccogliere cocco 🥥 in una fattoria di ananas 🍍*\n\n_--> 🍍>🥥<🍍_', '*Mele e cocco non sono la combinazione migliore*\n\n_--> 🍎>🥥<🍎_' , '*Noci di cocco e mela non sono un granché*\n\n_--> 🥥>🍎<🥥_']
+       const won = ['*Hai raccolto un cesto di*\n\n_--> 🍎+🍎+🍎_', '*Impressionante, devi essere uno specialista nella raccolta di noci di cocco*\n\n_--> 🥥+🥥+🥥_', ' *Incredibile, farai il succo d'ananas per la famiglia*\n\n_--> 🍍+🍍+🍍_']   
+       const near = ['*Wow, eri così vicino a vincere ananas*\n\n_--> 🍎-🍍+🍍_', '*Hmmm, eri così vicino a vincere mele*\n\n_--> 🍎+🍎-🍍_ ']      
+       const jack = ['*   JackPot 🤑*\n\n_--> 🍇×🍇×🍇×🍇_', '*🎉 JaaackPooot!*\n\n_--> 🥥×🥥×🥥×🥥_', '*🎊 Hai appena colpito un jackpot del valore di 💎1000*']
        const user = m.sender
        const cara = "cara"
        const k = 100
        const balance1  = await eco.balance(user, cara)
        
-       if (k > balance1.wallet) return replay(`You are going to be spinning on your wallet, you need at least 💎100`);
+       if (k > balance1.wallet) return replay(`
+Stai per girare sul tuo portafoglio, ti servono almeno 💎100`);
        const f1 = fruit1[Math.floor(Math.random() * fruit1.length)];
        const f2 = fruit2[Math.floor(Math.random() * fruit2.length)];
        const f3 = fruit3[Math.floor(Math.random() * fruit3.length)];
@@ -1951,34 +1955,34 @@ case'slot': case 'spin': {
        
        if ((f1 !== f2) && f2 !== f3){
           const deduct1 = await eco.deduct(user, cara, 50);
-                 replay(`${mess1}\n\n*Big Lose -->* _💎50_`)
+                 replay(`${mess1}\n\n*Grande Perdita -->* _💎50_`)
        }
        else if ((f1 == f2) && f2 == f3){
           const give1 = await eco.give(user, cara, 100); 
-                replay(`${mess2}\n*_Big Win -->* _💎100_`)
+                replay(`${mess2}\n*_Grande Vincita -->* _💎100_`)
        }
        else if ((f1 == f2) && f2 !== f3){
           const give2 = await eco.give(user, cara, 20);
-                replay(`${mess3}\n*Small Win -->* _💎20_`)
+                replay(`${mess3}\n*Piccola Vincita -->* _💎20_`)
        }
        else if ((f1 !== f2) && f1 == f3){
           const deduct2 = await eco.deduct(user, cara, 20);
-                replay(`${mess5}\n\n*Small Lose -->* _💎20_`)
+                replay(`${mess5}\n\n*Piccola Perdita -->* _💎20_`)
        }
        else if ((f1 !== f2) && f2 == f3){
           const give4 = eco.give(user, cara, 20); 
-                replay(`${mess3}\n\n*Small Win -->* _💎20_`)
+                replay(`${mess3}\n\n*Piccola Vincita -->* _💎20_`)
        }
        else if (((f1 == f2) && f2 == f3) && f3 == f4){
           const give5 = eco.give(user, cara, 1000);
                replay(`${mess4}\n\n_🎊 JackPot --> _💎1000_`)
        }
        else { 
-               replay(`Do you understand what you are doing?`)
+               replay(`Hai capito cosa fare?
        }
     }
     else{
-           replay(`*You can only play this game during weekends*\n\n*🌿 Friday*\n*🎏 Saturday*\n*🎐 Sunday*`)
+           replay(`*Puoi giocare a questo gioco solo durante i fine settimana*\n\n*🌿 venerdì*\n*🎏 sabato*\n*🎐 domenica*`)
     }
 }
 break
