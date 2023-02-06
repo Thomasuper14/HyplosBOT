@@ -5515,7 +5515,7 @@ A17.sendMessage(from, { react: { text: "📃" , key: m.key }})
 const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 
 │───────────────────────│
-┠⬡│▸ ${pushname} Sono *HyPlosBOT*, Un bot sviluppato da *plo19* - *Hypnos*.
+┠⬡│▸ ${pushname} Sono *HyPlosBOT*, Un bot sviluppato da *${global.OwnerName}*.
 │───────────────────────│
 │╭────────────────···▸
 ┠─────═[ *OGGI* ]═────
@@ -5531,7 +5531,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ┴│▸ 
 ⬡│▸ *Nome:* ${pushname} 
 ⬡│▸ *Prefisso :*  ${prefix}
-⬡│▸ *Nome degli Owner :* *plo19* - *Hypnos*
+⬡│▸ *Nome degli Owner :* ${global.author}
 ⬡│▸ *Velocità Bot :* ${latensie.toFixed(4)} ms 
 ⬡│▸ *Utilizzi Totali :* ${Object.keys(global.db.users).length}
 ⬡│▸ *Bot RUNTIME :* ${runtime(process.uptime())} 
