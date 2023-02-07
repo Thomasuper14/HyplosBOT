@@ -1546,6 +1546,7 @@ for (let anju of kaiaudio){
 	
 if (smallinput=='ping') {
         reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
+        A17.sendMessage(from, { react: { text: "🏓" , key: m.key }})
     }
 
 	
