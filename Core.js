@@ -4517,7 +4517,7 @@ case 'charactercheck':
      ]
                    const A17dareww = dare[Math.floor(Math.random() * dare.length)]
                    buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
-                   A17.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ A17dareww }, {quoted:m})
+                   A17.sendMessage(from, { image: buffer, caption: '*Hai Scelto Dare*\n\n'+ A17dareww }, {quoted:m})
                    break
                        
 
