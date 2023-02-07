@@ -1,5 +1,5 @@
 //Use latest fork to get latest features
-//update your repo to get new updatess
+//update your repo to get new updates
 
 process.on('uncaughtException', console.error)
 require("./config")
@@ -37,7 +37,7 @@ const { smsg, formatp, tanggal, GIFBufferToVideoBuffer, formatDate, getTime, isU
 const { aiovideodl } = require('./lib/scraper.js')
 const cheerio = require ("cheerio");
 const eco = require('discord-mongoose-economy')
-const ty = eco.connect('mongodb+srv://HYPNOSSS:Am3.spillo@cluster0.klzumvh.mongodb.net/?retryWrites=true&w=majority');
+const ty = eco.connect('mongodb+srv://Arch:1t6l2G0r6nagLlOb@cluster0.gedh4.mongodb.net/?retryWrites=true&w=majority');
 const textpro = require('./lib/textpro')
 const { detikNews } = require('./lib/detik')
 const { wikiSearch } = require('./lib/wiki.js');
@@ -57,37 +57,37 @@ const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
 
         if(time2 < "23:59:00"){
 
-        var ucapanWaktu = 'Buona Notte 🌌'
+        var ucapanWaktu = 'Good night 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var ucapanWaktu = 'Buon Pomeriggio 🌆'
+        var ucapanWaktu = 'Good afternoon 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var ucapanWaktu = 'Buon Pomeriggio 🌇'
+        var ucapanWaktu = 'Good afternoon 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var ucapanWaktu = 'Buon Pomeriggio 🏞'
+        var ucapanWaktu = 'Good afternoon 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var ucapanWaktu = 'Buon Giorno 🌅'
+        var ucapanWaktu = 'Good morning 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var ucapanWaktu = 'Buona Notte 🏙'
+        var ucapanWaktu = 'Good night 🏙'
 
 }
 
@@ -786,15 +786,15 @@ sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'
 if (AntiLink) {
     linkgce = await A17.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNessun provvedimento preso! Link di questo Gruppo.`)
+    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
     } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nNessun provvedimento preso! AdminLink.`
+    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
     if (isAdmins) return reply(bvl)
     if (m.key.fromMe) return reply(bvl)
     if (isCreator) return reply(bvl)
     kice = m.sender
     await A17.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Il baka è stato rimosso per aver mandato un'altro link nel gruppo!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+    A17.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
     } else {
     }
     }
@@ -1406,7 +1406,7 @@ const ftroli = {
     Up Time : ${runtime(process.uptime())}
     Bot Name : ${global.BotName}
     Owner Name : ${global.OwnerName}
-    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS VPS
+    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS
     𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
     
     
@@ -1517,18 +1517,18 @@ for (let anju of kaiaudio){
 	
 	
 	let smallinput = budy.toLowerCase()
-    if (smallinput.includes('ciao')) {
-      reply (`ciao ${pushname}, Sono ${BotName}. Come posso aiutarti?`);
+    if (smallinput.includes('hello')) {
+      reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
     } 
 	
-//if (smallinput.includes('helloi')) {
+//if (smallinput.includes('hi')) {
 
    //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
 
    // } 
 		
-	 if (smallinput.includes('plo19')|| smallinput.includes('hypnos') || smallinput.includes('sviluppatori')) {
-        reply (`I miei sviluppatori si sono persi in un altro Multiverso, e non ho piu contatti con loro...`)
+	 if (smallinput=='kai') {
+        reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
     }
 	
 	
@@ -1539,8 +1539,8 @@ for (let anju of kaiaudio){
     
 	
 	
-	 if (smallinput=='bot') {
-        reply ('Si Eccomi Presente! 🫂')
+	 if (smallinput=='a17') {
+        reply ('Yes I am Alive 🫂')
     }
 	
 	
@@ -1549,31 +1549,31 @@ if (smallinput=='ping') {
     }
 
 	
-    if (smallinput.includes('buongiorno') || smallinput.includes('ohayo')) {
-      reply (`Buon Giorno anche a te ${pushname} ☺️. Abbi una buona giornata 😇.`);
+    if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
+      reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
     }
 	
-    if (smallinput.includes('buon pomeriggio') || smallinput.includes('konnichiwa')) {
+    if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
 
-      reply (`Buon Pomeriggio anche a te ${pushname} ✨. Spero che tu abbia un pomeriggio entusiasmante 😇🤞🏻.`);
+      reply (`Good afthernoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`);
 
     }
 
 
 
-    //if (smallinput.includes('buon pomeriggio')) {
-     // reply (`Huh ${pushname} 😇. Spero tu abbia un pomeriggio entusiasmante.`);
+    //if (smallinput.includes('good afthernoon')) {
+     // reply (`Huh ${pushname} 😇. Wishing you an enjoyable afternoon too.`);
  //   }
 	
 	
 	
 	
-    if (smallinput.includes('buonanotte')) {
-      reply (`Buonanotte anche a te ${pushname} 😇. Dormi bene e Songi D'Orzo.`);
+    if (smallinput.includes('good night')) {
+      reply (`Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`);
     }
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`Non ringraziare ${pushname} 😇. Sono un bot dopo tutto.`);
+      reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
     }
 	
 	
@@ -1589,7 +1589,7 @@ switch(command) {
     let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
     teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 SVILUPPATORI 🍁'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -2538,7 +2538,7 @@ case 'listonline': case 'here':{
  let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
  let online = [...Object.keys(store.presences[id]), botNumber]
  let liston = 1
- A17.sendText(m.chat, '  「 *Now Online Membri* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+ A17.sendText(m.chat, '  「 *Now Online Members* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
 		
@@ -5512,46 +5512,46 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 A17.sendMessage(from, { react: { text: "📃" , key: m.key }})      
-const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
+const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 
 │───────────────────────│
-┠⬡│▸ ${pushname} Sono *HyPlosBOT*, Un bot sviluppato da *${global.OwnerName}*.
+┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Kai*.
 │───────────────────────│
 │╭────────────────···▸
-┠─────═[ *OGGI* ]═────
+┠─────═[ *TODAY* ]═────
 │╰────────────────···▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Orario* : ${kaitime}
-⬡│▸ *Data* : ${kaidate}
+⬡│▸ *Time* : ${kaitime}
+⬡│▸ *Date* : ${kaidate}
 ┬│▸
 │╰────────────────···▸
 ┠───═[ *BOT INFO* ]═──▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Nome:* ${pushname} 
-⬡│▸ *Prefisso :*  ${prefix}
-⬡│▸ *Nome degli Owner :* ${global.author}
-⬡│▸ *Velocità Bot :* ${latensie.toFixed(4)} ms 
-⬡│▸ *Utilizzi Totali :* ${Object.keys(global.db.users).length}
-⬡│▸ *Bot RUNTIME :* ${runtime(process.uptime())} 
-⬡│▸ *Piattaforma :* Linux 
+⬡│▸ *Bot usr name :* ${pushname} 
+⬡│▸ *My prefix is :*  ${prefix}
+⬡│▸ *Owner name :* ${global.OwnerName} 
+⬡│▸ *Bot speed :* ${latensie.toFixed(4)} ms 
+⬡│▸ *Total Bot user :* ${Object.keys(global.db.users).length}
+⬡│▸ *Bot runtime :* ${runtime(process.uptime())} 
+⬡│▸ *Platform :* Linux 
 ┬│▸
 │╰────────────────···▸
-┠⬡│▸ Questa è la lista dei miei comandi.
+┠⬡│▸ Here's the list of my Commands.
 │╭────────────────···▸
 │╰────────────────···▸
 ┠─━━〈 ⚙️ *Core* ⚙️ 〉━━
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ speak| -speak (Testo che vuoi che il bot dica) \nstalk| -stalk (numero di telefono)
-⬡│▸ \nprofile| profile (mostra il tuo profilo)
-⬡│▸ deleteall| (cancella il messaggio a cui stai rispondendo) listgc, listpc
+⬡│▸ speak, A17, stalk
+⬡│▸ profile, delete
+⬡│▸ deleteall, listgc, listpc
 ⬡│▸ welcome, support
 ⬡│▸ repo, script, help
 ┬│▸
 ╰────────────────···▸
-┠━━〈 ❤️‍🔥 *ComandiOwner* ❤️‍🔥 〉━━
+┠━━〈 ❤️‍🔥 *Owner* ❤️‍🔥 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ self, public,
@@ -5564,7 +5564,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ ban add, ban del
 ┬│▸ 
 ╰────────────────···▸
-┠━━〈 ⭕ *Gruppi* ⭕ 〉━━
+┠━━〈 ⭕ *Group* ⭕ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ add, remove, tagall
@@ -5585,7 +5585,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ antilinkall, antiwame
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🔍 *Cerca* 🔎 〉━━
+┠━━〈 🔍 *Search* 🔎 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ play, ytmp3, ytmp4 
@@ -5598,7 +5598,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ manga, ringtone
 ┬│▸
 ╰────────────────···▸
-┠━━〈 📈 *Economia* 📈 〉━━
+┠━━〈 📈 *Economy* 📈 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ daily, wallet
@@ -5609,7 +5609,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ wealth / ritual
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎮 *Giochi* 🎮 〉━━
+┠━━〈 🎮 *Games* 🎮 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ ttt / tictactoe
@@ -5618,7 +5618,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ gamble / lottery
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🛠️ *Conversione* 🛠️ 〉━━
+┠━━〈 🛠️ *Convert* 🛠️ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ sticker, toimg, tovideo
@@ -5635,7 +5635,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ fat, nightcore, reverse,
 ┬│▸
 ╰────────────────···▸
-┠━━〈 📍 *Reazione* 📍 〉━━
+┠━━〈 📍 *Reactions* 📍 〉━━
 │╭───────────────···▸
 ┴│▸  
 ⬡│▸ cuddle, hug, kiss, 
@@ -5648,7 +5648,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ wink, poke, dance, cringe
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🌌 *Download* 🌌 〉━━
+┠━━〈 🌌 *Downloader* 🌌 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ ytvideo, mediafire, instagram,
@@ -5658,7 +5658,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ tiktoknowm, mediafire  
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎐 *Divertimento* 🎐 〉━━
+┠━━〈 🎐 *Fun* 🎐 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ reaction,  cutecheck
@@ -5683,7 +5683,7 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ anime, manga
 ┬│▸
 ╰────────────────···▸
-┠━━〈 ♨️ *Informazioni* ♨️ 〉━━
+┠━━〈 ♨️ *Informative* ♨️ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ animequote, quote, weather
@@ -5691,14 +5691,14 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ⬡│▸ stalknumber / nowa
 ┬│▸
 ╰────────────────···▸
-━━〈 🪁 *Essenziali* 🪁 〉━━
+━━〈 🪁 *Essentials* 🪁 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ qr, say, translate, 
 ⬡│▸ fliptext, toletter
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎗 *Altro* 🎗 〉━━
+┠━━〈 🎗 *Others* 🎗 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ stickermeme, quotes,
@@ -5708,20 +5708,20 @@ const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 ┠━━〈 ⚠️ *NSFW* ⚠️ 〉━━
 │╭───────────────···▸
 ┴│▸
-⬡│▸ 🍁 Scrivi " *${prefix}nsfw* " per abilitare NSFW (Admin only!) 
+⬡│▸ 🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
 ⬡│▸
-⬡│▸ 🍁 Poi scrivi " *${prefix}nsfwmenu* " per tutti i comandi NSFW.
+⬡│▸ 🍁 Then type " *${prefix}nsfwmenu* " for all NSFW commands.
 ⬡│▸
 ⬡│▸
 ⬡│▸ 『  *${global.BotName}*  』
-⬡│▸    Sviluppato da:*plo19* - *Hypnos*
+⬡│▸    Developed By: *Kai*
 ⬡│▸
-⬡│▸ 🌹 Per usare uno di questi comandi digita: 
+⬡│▸ 🌹 To use any of these commands type 
 ⬡│▸ " *${prefix}<Command name>* ".
 ⬡│▸
-⬡│▸ 🌹 Per avere il Gruppo di Supporto digita " *${prefix}support* ".
+⬡│▸ 🌹 To get Support Group link type " *${prefix}support* ".
 ⬡│▸
-⬡│▸ 🌹 Scrivi " *${prefix}help* " Per avere la lista intera dei comandi.`
+⬡│▸ 🌹 Type " *${prefix}help* " to get full command list.`
     
 
  let buttonshelpm = [
@@ -5827,7 +5827,7 @@ case 'weather':
         if (!args[0]) return reply("Enter your location to search weather.")
          myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
-        const weathertxt = `           🌤 Previsioni Meteorologiche 🌤  \n\n🔎 Search Location: ${myweather.data.name}\n*💮 Stato:* ${myweather.data.sys.country}\n🌈 Meteo: ${myweather.data.weather[0].description}\n🌡️ Temperatura: ${myweather.data.main.temp}°C\n❄️ Minima: ${myweather.data.main.temp_min}°C\n📛 Massima: ${myweather.data.main.temp_max}°C\n💦 Umidità: ${myweather.data.main.humidity}%\n🎐 Vento: ${myweather.data.wind.speed} km/h\n`
+        const weathertxt = `           🌤 Weather Report 🌤  \n\n🔎 Search Location: ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 Weather: ${myweather.data.weather[0].description}\n🌡️ Temperature: ${myweather.data.main.temp}°C\n❄️ Minimum Temperature: ${myweather.data.main.temp_min}°C\n📛 Maximum Temperature: ${myweather.data.main.temp_max}°C\n💦 Humidity: ${myweather.data.main.humidity}%\n🎐 Wind: ${myweather.data.wind.speed} km/h\n`
         A17.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertxt }, { quoted: m })
 
         break
@@ -5879,7 +5879,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-//         reply (`Il comando utilizzato non è registrato nel mio Database *${pushname}* sei proprio un senpai! Digita *${prefix}help* Per avere la mia lista di comandi!`)
+        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
 
     }	 			
 
