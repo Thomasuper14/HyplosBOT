@@ -5513,33 +5513,33 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 A17.sendMessage(from, { react: { text: "📃" , key: m.key }})      
-const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
+const helpmenu = `Hey *${pushname}* Salve...!! ${ucapanWaktu} ,
 
 │───────────────────────│
-┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Kai*.
+┠⬡│▸ ${pushname} Sono *Hyplos*, Un bot sviluppato da *plo19* - *Hypnos*.
 │───────────────────────│
 │╭────────────────···▸
-┠─────═[ *TODAY* ]═────
+┠─────═[ *OGGI* ]═────
 │╰────────────────···▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Time* : ${kaitime}
-⬡│▸ *Date* : ${kaidate}
+⬡│▸ *Ora* : ${kaitime}
+⬡│▸ *Data* : ${kaidate}
 ┬│▸
 │╰────────────────···▸
 ┠───═[ *BOT INFO* ]═──▸
 │╭────────────────···▸
 ┴│▸ 
-⬡│▸ *Bot usr name :* ${pushname} 
-⬡│▸ *My prefix is :*  ${prefix}
-⬡│▸ *Owner name :* ${global.OwnerName} 
-⬡│▸ *Bot speed :* ${latensie.toFixed(4)} ms 
-⬡│▸ *Total Bot user :* ${Object.keys(global.db.users).length}
+⬡│▸ *Nome :* ${pushname} 
+⬡│▸ *Il Prefisso è :*  ${prefix}
+⬡│▸ *Nome Owner :* ${global.OwnerName} 
+⬡│▸ *Velocità Bot :* ${latensie.toFixed(4)} ms 
+⬡│▸ *User Totali :* ${Object.keys(global.db.users).length}
 ⬡│▸ *Bot runtime :* ${runtime(process.uptime())} 
-⬡│▸ *Platform :* Linux 
+⬡│▸ *Piattaforma :* VPS 
 ┬│▸
 │╰────────────────···▸
-┠⬡│▸ Here's the list of my Commands.
+┠⬡│▸ Ecco la lista dei miei comandi!
 │╭────────────────···▸
 │╰────────────────···▸
 ┠─━━〈 ⚙️ *Core* ⚙️ 〉━━
@@ -5565,7 +5565,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ ban add, ban del
 ┬│▸ 
 ╰────────────────···▸
-┠━━〈 ⭕ *Group* ⭕ 〉━━
+┠━━〈 ⭕ *Gruppi* ⭕ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ add, remove, tagall
@@ -5586,7 +5586,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ antilinkall, antiwame
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🔍 *Search* 🔎 〉━━
+┠━━〈 🔍 *Ricerca* 🔎 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ play, ytmp3, ytmp4 
@@ -5599,7 +5599,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ manga, ringtone
 ┬│▸
 ╰────────────────···▸
-┠━━〈 📈 *Economy* 📈 〉━━
+┠━━〈 📈 *Economia* 📈 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ daily, wallet
@@ -5610,7 +5610,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ wealth / ritual
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎮 *Games* 🎮 〉━━
+┠━━〈 🎮 *Giochi* 🎮 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ ttt / tictactoe
@@ -5619,7 +5619,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ gamble / lottery
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🛠️ *Convert* 🛠️ 〉━━
+┠━━〈 🛠️ *Converti* 🛠️ 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ sticker, toimg, tovideo
@@ -5636,7 +5636,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ fat, nightcore, reverse,
 ┬│▸
 ╰────────────────···▸
-┠━━〈 📍 *Reactions* 📍 〉━━
+┠━━〈 📍 *Reazioni* 📍 〉━━
 │╭───────────────···▸
 ┴│▸  
 ⬡│▸ cuddle, hug, kiss, 
@@ -5659,7 +5659,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ tiktoknowm, mediafire  
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎐 *Fun* 🎐 〉━━
+┠━━〈 🎐 *Divertimento* 🎐 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ reaction,  cutecheck
@@ -5692,14 +5692,14 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ stalknumber / nowa
 ┬│▸
 ╰────────────────···▸
-━━〈 🪁 *Essentials* 🪁 〉━━
+━━〈 🪁 *Essenziali* 🪁 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ qr, say, translate, 
 ⬡│▸ fliptext, toletter
 ┬│▸
 ╰────────────────···▸
-┠━━〈 🎗 *Others* 🎗 〉━━
+┠━━〈 🎗 *Altro* 🎗 〉━━
 │╭───────────────···▸
 ┴│▸
 ⬡│▸ stickermeme, quotes,
@@ -5709,20 +5709,20 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ┠━━〈 ⚠️ *NSFW* ⚠️ 〉━━
 │╭───────────────···▸
 ┴│▸
-⬡│▸ 🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
+⬡│▸ 🍁 Digita " *${prefix}nsfw* " quindi abilita NSFW (solo amministratore!)
 ⬡│▸
-⬡│▸ 🍁 Then type " *${prefix}nsfwmenu* " for all NSFW commands.
+⬡│▸ 🍁 Quindi digita " *${prefix}nsfwmenu* " per tutti i comandi NSFW.
 ⬡│▸
 ⬡│▸
-⬡│▸ 『  *${global.BotName}*  』
-⬡│▸    Developed By: *Kai*
+⬡│▸ 『 *${global.BotName}* 』
+⬡│▸ Sviluppato da: *Kai*
 ⬡│▸
-⬡│▸ 🌹 To use any of these commands type 
-⬡│▸ " *${prefix}<Command name>* ".
+⬡│▸ 🌹 Per usare uno di questi comandi digita
+⬡│▸ " *${prefisso}<Nome comando>* ".
 ⬡│▸
-⬡│▸ 🌹 To get Support Group link type " *${prefix}support* ".
+⬡│▸ 🌹 Per ottenere il link del gruppo di supporto digita " *${prefix}support* ".
 ⬡│▸
-⬡│▸ 🌹 Type " *${prefix}help* " to get full command list.`
+⬡│▸ 🌹 Digita " *${prefix}help* " per ottenere l'elenco completo dei comandi.`
     
 
  let buttonshelpm = [
@@ -5749,7 +5749,7 @@ case '':
       A17pic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Do you need help ${pushname} ? Type *${prefix}help* to get my full command list.`
+ const needhelpmenu = `Hai bisogno di aiuto ${pushname} ? Digita *${prefix}help* per ottenere il mio elenco completo dei comandi.`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
@@ -5880,7 +5880,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+        reply (`Nessun comando programmato *${pushname}* senpai! Digita *${prefix}help* per ottenere il mio elenco completo dei comandi!`)
 
     }	 			
 
