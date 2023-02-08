@@ -31,7 +31,7 @@ global.reactmoji = "❤️"
 global.themeemoji = "💖"
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' }
 global.websitex = "https://youtu.be/dQw4w9WgXcQ"
-global.lolhuman = "KaysaS"
+global.lolhuman = "Hypnos"
 
 
 global.BotLogo = fs.readFileSync("./Assets/pic1.jpg")
@@ -68,9 +68,9 @@ global.mess = {
     grouponly: 'Questo comando è utilizzabile sono nei *Gruppi*!',
     privateonly: 'Questo comando è utilizzabile solo in *Chat Privata*!',
     botonly: 'Only the *Bot itself* can use this command!',
-    waiting: ' Ruko Zara...',
+    waiting: ' Caricamento...',
     nolink: 'Please provide me *link*, Uff!',
-    error: 'An error occurd!',
+    error: 'An error occured!',
     banned: 'You are *Banned* fron using commands!, Haha',
     bangc: 'This Group is *Banned* from using Commands!',
     nonsfw: 'Dont be a pervert  Uff! This is not a NSFW enabled group!, Uff!,'
