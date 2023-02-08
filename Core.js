@@ -1703,9 +1703,9 @@ let buttonspro = [
       phoneNumber
     });
     fs.writeFileSync('database.json', JSON.stringify(reviews), 'utf-8');
-    message.reply(`Ecco la tua Recensione!\n${parsedRating} ⭐\nCommento💬: "${comment}"\n(📞: ${phoneNumber})\nGrazie!`);
+    reply(`Ecco la tua Recensione!\n${parsedRating} ⭐\nCommento💬: "${comment}"\n(📞: ${phoneNumber})\nGrazie!`);
   } else {
-    message.reply('Per favore, fornisci una recensione con /recensione (1-5) (commento)');
+    reply('Per favore, fornisci una recensione con /recensione (1-5) (commento)');
   }
 }
 break
@@ -1726,7 +1726,7 @@ break
   } else {
     reviewText = "Non ci sono ancora recensioni.";
   }
-  message.reply(reviewText);
+  reply(reviewText);
 }
 break
 
@@ -2124,7 +2124,7 @@ if (isBanChat) return reply(mess.banChat)
     if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return replay(`You Are Still In The Game`)
     let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     if (room) {
-    reply('Partner found!')
+    -('Partner found!')
     room.o = m.chat
     room.game.playerO = m.sender
     room.state = 'PLAYING'
