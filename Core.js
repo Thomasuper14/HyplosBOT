@@ -1517,8 +1517,16 @@ for (let anju of kaiaudio){
 	
 	
 	let smallinput = budy.toLowerCase()
-    if (smallinput.includes('hello')) {
-      reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+    if (smallinput.includes('ciao')) {
+      reply (`Ciao ${pushname}, Sono ${BotName}. Come posso aiutarti?`);
+    } 
+	
+    if (smallinput.includes('roma')) {
+      reply (`Ciao ${pushname}, Sono ${BotName}. Daje Roma Daje Ya Ya UUH!`);
+    } 
+	
+    if (smallinput.includes('Roma')) {
+      reply (`Ciao ${pushname}, Sono ${BotName}. Daje Roma Daje Ya Ya UUH!`);
     } 
 	
 //if (smallinput.includes('hi')) {
