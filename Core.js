@@ -57,37 +57,37 @@ const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
 
         if(time2 < "23:59:00"){
 
-        var ucapanWaktu = 'Good night 🌌'
+        var ucapanWaktu = 'Buona Notte 🌌'
 
 }
 
         if(time2 < "19:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🌆'
+        var ucapanWaktu = 'Buon Pomeriggio 🌆'
 
 }
 
         if(time2 < "18:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🌇'
+        var ucapanWaktu = 'Buon Pomeriggio 🌇'
 
 }
 
         if(time2 < "15:00:00"){
 
-        var ucapanWaktu = 'Good afternoon 🏞'
+        var ucapanWaktu = 'Buon Pomeriggio 🏞'
 
 }
 
         if(time2 < "11:00:00"){
 
-        var ucapanWaktu = 'Good morning 🌅'
+        var ucapanWaktu = 'Buon Giorno 🌅'
 
 }
 
         if(time2 < "05:00:00"){
 
-        var ucapanWaktu = 'Good night 🏙'
+        var ucapanWaktu = 'Buona Notte 🏙'
 
 }
 
@@ -1590,7 +1590,7 @@ switch(command) {
     let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
     teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 DEVELOPER 🍁'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: '🍁 SVILUPPATORI 🍁'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
