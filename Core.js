@@ -5838,7 +5838,7 @@ case '':
       A17pic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Hai bisogno di aiuto ${pushname} ? Digita *${prefix}help* per ottenere il mio elenco completo dei comandi.`
+ const needhelpmenu = `Hai bisogno di aiuto ${pushname}? Digita *${prefix}help* per ottenere il mio elenco completo dei comandi.`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
