@@ -5918,7 +5918,7 @@ case 'weather':
         if (!args[0]) return reply("Enter your location to search weather.")
          myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
-        const weathertxt = `           🌤 Meteo 🌤  \n\n🔎 Search Location: ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 Weather: ${myweather.data.weather[0].description}\n🌡️ Temperature: ${myweather.data.main.temp}°C\n❄️ Minimum Temperature: ${myweather.data.main.temp_min}°C\n📛 Maximum Temperature: ${myweather.data.main.temp_max}°C\n💦 Humidity: ${myweather.data.main.humidity}%\n🎐 Wind: ${myweather.data.wind.speed} km/h\n`
+        const weathertxt = `           🌤 Meteo 🌤  \n\n🔎 Luogo: ${myweather.data.name}\n*💮 Stato:* ${myweather.data.sys.country}\n🌈 Meteo: ${myweather.data.weather[0].description}\n🌡️ Temperatura: ${myweather.data.main.temp}°C\n❄️ Minima: ${myweather.data.main.temp_min}°C\n📛 Massima: ${myweather.data.main.temp_max}°C\n💦 Umidità: ${myweather.data.main.humidity}%\n🎐 Vento: ${myweather.data.wind.speed} km/h\n`
         A17.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertxt }, { quoted: m })
 
         break
@@ -5936,7 +5936,7 @@ case 'weather':
         ? m.quoted.text
         : m.text;
       const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "it", slow: false, host: "https://translate.google.com",});
       A17.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `A17SpeechEngine.mp3`,},{quoted: m,});
     }
     break;
@@ -5962,55 +5962,6 @@ case 'weather':
                         return('Error!')
                     })
     break
-    const fs = require('fs');
-
-    if (message.body.startsWith('-recensione')) {
-      const [command, rate, ...comments] = message.body.split(' ');
-      const parsedRating = parseInt(rate);
-      const comment = comments.join(' ');
-      const phoneNumber = message.from.replace(/[^0-9]/g, '');
-    
-      if (!comment) {
-        message.reply('Per favore, fornisci un commento per la recensione.');
-        return;
-      }
-    
-      const alreadyLeftReview = reviews.find(review => review.phoneNumber === phoneNumber);
-      if (alreadyLeftReview) {
-        message.reply("Limite di recensioni raggiunto!");
-        return;
-      }
-    
-      if (parsedRating >= 1 && parsedRating <= 5) {
-        reviews.push({
-          rating: parsedRating,
-          comment,
-          phoneNumber
-        });
-        fs.writeFileSync('database.json', JSON.stringify(reviews), 'utf-8');
-        message.reply(`Ecco la tua Recensione!\n${parsedRating} ⭐\nCommento💬: "${comment}"\n(📞: ${phoneNumber})\nGrazie!`);
-      } else {
-        message.reply('Per favore, fornisci una recensione con /recensione (1-5) (commento)');
-      }
-    }
-    
-    if (message.body.startsWith('-recensioni')) {
-      let reviewText = "Ecco la lista delle recensioni:\n";
-      let ratingSum = 0;
-      const data = fs.readFileSync('database.json', 'utf-8');
-      const reviews = JSON.parse(data);
-      for (let i = 0; i < reviews.length; i++) {
-        reviewText += ` #${i + 1}: ${reviews[i].rating} ⭐ - Commento: "${reviews[i].comment}"\nNumero di telefono: ${reviews[i].phoneNumber}\n`;
-        reviewText += "---------------------\n";
-        ratingSum += reviews[i].rating;
-      }
-      if (reviews.length > 0) {
-        let averageRating = ratingSum / reviews.length;
-        reviewText += `Media Totale: ${averageRating} ⭐.`;
-      } else {
-        reviewText = "Non ci sono ancora recensioni.";
-      }
-    }
 
 
 default:
