@@ -1522,11 +1522,19 @@ for (let anju of kaiaudio){
     } 
 	
     if (smallinput.includes('roma')) {
-      reply (`Ciao ${pushname}, Sono ${BotName}. Daje Roma Daje Ya Ya UUH!`);
+      reply (`Fozza Maggica ${pushname}. Daje Roma Daje Ya Ya UUH!`);
     } 
 	
     if (smallinput.includes('Roma')) {
-      reply (`Ciao ${pushname}, Sono ${BotName}. Daje Roma Daje Ya Ya UUH!`);
+      reply (`Fozza Maggica ${pushname}. Daje Roma Daje Ya Ya UUH!`);
+    } 
+    
+    if (smallinput.includes('Genova')) {
+      reply (`Hey ${pushname}. Forza Genoa!`);
+    } 
+	
+    if (smallinput.includes('sus')) {
+      reply (`SussyBaka ${pushname}. Sus 104 ez UwU`);
     } 
 	
 //if (smallinput.includes('hi')) {
