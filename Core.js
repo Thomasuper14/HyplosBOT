@@ -4592,7 +4592,7 @@ case 'charactercheck':
           "say i love depak kalal through voice note",
           "write i am feeling horny and put it on status, u can delete it only after 5hrs",
           "write i am lesbian and put it on status, u can delete only after 5hrs",
-          "kiss your mommy or papa and say i love you😌",
+          "kiss your mommy or papa and say sus",
           "put your father name on status for 5hrs",
           "send abusive words in any grup, excepting this grup, and send screenshot proof here"
      ]
