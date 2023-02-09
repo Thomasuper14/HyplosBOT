@@ -54,28 +54,7 @@ const { mediafireDl } = require('./lib/mediafire.js')
 const kaitime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const kaidate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
-var commandCounter = 0;
-var blockCommands = false;
 
-// ...
-
-case 'your_command': {
-  if (blockCommands) {
-    reply('Too many commands sent, please wait and try again later.');
-    break;
-  }
-
-  if (message.text.startsWith('-')) {
-    commandCounter++;
-
-    if (commandCounter >= 10) {
-      blockCommands = true;
-      setTimeout(function() {
-        commandCounter = 0;
-        blockCommands = false;
-      }, 10000);
-    }
-  }
         if(time2 < "23:59:00"){
 
         var ucapanWaktu = 'Buona Notte 🌌'
@@ -1641,8 +1620,29 @@ switch(command) {
     A17.sendMessage(m.chat, buttonMessage, { quoted: m })
     }
     break
+var commandCounter = 0;
+var blockCommands = false;
 
+// ...
 
+case 'your_command': {
+  if (blockCommands) {
+    reply('Too many commands sent, please wait and try again later.');
+    break;
+  }
+
+  if (message.text.startsWith('-')) {
+    commandCounter++;
+
+    if (commandCounter >= 10) {
+      blockCommands = true;
+      setTimeout(function() {
+        commandCounter = 0;
+        blockCommands = false;
+      }, 10000);
+    }
+  }
+break;}
 case 'me': case 'profile': case 'p':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -6026,6 +6026,3 @@ console.log(chalk.redBright(`Update ${__filename}`))
 delete require.cache[file]
 require(file)
 })
-
-}
-break;
