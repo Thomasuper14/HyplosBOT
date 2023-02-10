@@ -8,7 +8,7 @@ global.antitags = true
 
 //aumto functioner
 //global.autoTyping = false //auto tying in gc (true to yon, false to off)
-//global.autoRecord = true //auto recording (true to on, false to off)
+//global.autoRecord = true // auto recording (true to on, false to off)
 
 global.Owner = ['393477037227','393662531766']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
 global.OwnerNumber = ['393477037227','393662531766']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
