@@ -54,6 +54,12 @@ const { mediafireDl } = require('./lib/mediafire.js')
 const kaitime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const kaidate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')
+const cron = require('node-cron');
+const messages = [
+  "Questo è il primo messaggio programmato.",
+  "Questo è il secondo messaggio programmato.",
+  "Questo è il terzo messaggio programmato."
+];
 
         if(time2 < "23:59:00"){
 
@@ -1592,6 +1598,11 @@ if (smallinput=='ping') {
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
       reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
     }
+	
+cron.schedule("*/10 * * * * *", function() {
+  	const message = messages[Math.floor(Math.random() * messages.length)];
+  	console.log(message);
+	});
 	
 	
 	
