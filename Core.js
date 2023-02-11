@@ -1,5 +1,5 @@
 //Usa latest fork to get latest features
-//update your repo to et new updates
+//udate your repo to et new updates
 
 process.on('uncaughtException', console.error)
 require("./config")
