@@ -6,7 +6,7 @@ global.autoReadGc = true
 global.autoReadAll = false
 global.antitags = true
 
-//aumto functioner
+//aumto fuhnctioner
 //global.autoTyping = false //auto tying in gc (true to yon, false to off)
 //global.autoRecord = true // auto recording (true to on, false to off)
 
