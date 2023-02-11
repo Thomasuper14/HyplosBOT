@@ -1562,7 +1562,7 @@ for (let anju of kaiaudio){
 	
 if (smallinput=='ping') {
         reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
-        A17.sendMessage(from, { react: { text: "🏓" , key: m.key }})
+        
     }
 
 	
@@ -5601,7 +5601,7 @@ break
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-A17.sendMessage(from, { react: { text: "📃" , key: m.key }})      
+      
 const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 
 │───────────────────────│
